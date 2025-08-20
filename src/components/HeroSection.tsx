@@ -1,7 +1,7 @@
 import { ArrowRight, Globe, Award, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import EnquiryForm from "./EnquiryForm";
-import heroImage from "@/assets/hero-bg.jpg";
+import heroImage from "@/assets/hero-bg.avif";
 
 const HeroSection = () => {
   const handleWhatsAppClick = () => {

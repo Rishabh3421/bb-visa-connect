@@ -10,7 +10,7 @@ const TestimonialsSection = () => {
       visa: "Express Entry PR",
       rating: 5,
       text: "BB Immigration made my Canadian PR dream come true! Their expert guidance throughout the Express Entry process was invaluable. Highly recommended!",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b606?w=150&h=150&fit=crop&crop=face"
+      image: "https://plus.unsplash.com/premium_photo-1682089810582-f7b200217b67?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       name: "Rajesh Kumar",
@@ -18,7 +18,7 @@ const TestimonialsSection = () => {
       visa: "Skilled Independent Visa",
       rating: 5,
       text: "Excellent service from start to finish. The team was professional, knowledgeable, and always available to answer my questions. Got my Australian visa in record time!",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?q=80&w=1506&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       name: "Meera Patel",
@@ -26,15 +26,15 @@ const TestimonialsSection = () => {
       visa: "H-1B Work Visa",
       rating: 5,
       text: "The documentation process was smooth and hassle-free. BB Immigration's expertise in US work visas is unmatched. Thank you for making my American dream possible!",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1532375810709-75b1da00537c?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       name: "Amit Singh",
       country: "UK",
       visa: "Student Visa",
-      rating: 5,
+      rating: 4,
       text: "Applied for UK student visa through BB Immigration. The team helped me with university selection, visa documentation, and interview preparation. Fantastic service!",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+      image: "https://plus.unsplash.com/premium_photo-1722889137160-c1ca17ae0084?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       name: "Neha Gupta",
@@ -42,15 +42,15 @@ const TestimonialsSection = () => {
       visa: "Skilled Migrant Category",
       rating: 5,
       text: "Professional and reliable service. The team at BB Immigration guided me through the entire New Zealand immigration process with transparency and efficiency.",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1591980896142-4e36328411ec?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       name: "Rohit Verma",
       country: "Singapore",
       visa: "Employment Pass",
-      rating: 5,
+      rating: 4,
       text: "Outstanding support for Singapore Employment Pass. The team's knowledge of Singapore immigration laws and their personalized approach made all the difference.",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/flagged/photo-1571367034861-e6729ad9c2d5?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ];
 

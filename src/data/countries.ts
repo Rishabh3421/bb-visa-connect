@@ -230,7 +230,7 @@ export const countries: Country[] = [
     flag: "🇳🇿",
     flagEmoji: "🇳🇿",
     description: "Experience the adventure and beauty of New Zealand",
-    image: "https://images.unsplash.com/photo-1507699622107-4be3abd695ad?w=800&h=600&fit=crop",
+    image: "https://imgs.search.brave.com/86KAjTX9Ro8qA9EsSYCcAxN5wdezlSX5dkUmhZ2YmA4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzE0LzAwLzI5LzUx/LzM2MF9GXzE0MDAy/OTUxMTJfWWp2QlU2/aTdpZ3JHemVnMkZU/bmUwQTdleFFGMVRP/Sm4uanBn",
     overview: "New Zealand offers immigration through its Skilled Migrant Category, work visas, and student visas. Known for its stunning landscapes, friendly people, and excellent work-life balance.",
     visaTypes: [
       "Skilled Migrant Category",
