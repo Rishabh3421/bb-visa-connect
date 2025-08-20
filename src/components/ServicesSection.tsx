@@ -1,10 +1,12 @@
 import { GraduationCap, Briefcase, Plane, Home, Building, Heart } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const ServicesSection = () => {
   const services = [
     {
+      id: "student-visas",
       icon: GraduationCap,
       title: "Student Visas",
       description: "Complete guidance for study abroad programs, university applications, and student visa processing.",
@@ -12,6 +14,7 @@ const ServicesSection = () => {
       color: "bg-blue-500"
     },
     {
+      id: "work-visas",
       icon: Briefcase,
       title: "Work Visas",
       description: "Professional work visa assistance for skilled workers seeking employment opportunities abroad.",
@@ -19,6 +22,7 @@ const ServicesSection = () => {
       color: "bg-green-500"
     },
     {
+      id: "tourist-visitor-visas",
       icon: Plane,
       title: "Tourist/Visitor Visas",
       description: "Hassle-free tourist and visitor visa services for leisure travel and business visits.",
@@ -26,6 +30,7 @@ const ServicesSection = () => {
       color: "bg-purple-500"
     },
     {
+      id: "pr-immigration",
       icon: Home,
       title: "PR & Immigration",
       description: "Permanent residency and immigration services for long-term settlement abroad.",
@@ -33,6 +38,7 @@ const ServicesSection = () => {
       color: "bg-orange-500"
     },
     {
+      id: "business-investor-visas",
       icon: Building,
       title: "Business/Investor Visas",
       description: "Investment and business visa solutions for entrepreneurs and investors.",
@@ -40,6 +46,7 @@ const ServicesSection = () => {
       color: "bg-red-500"
     },
     {
+      id: "family-dependent-visas",
       icon: Heart,
       title: "Family/Dependent Visas",
       description: "Family reunification and dependent visa services to keep families together.",
@@ -69,38 +76,41 @@ const ServicesSection = () => {
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
-            <Card key={index} className="gradient-card shadow-card hover:shadow-floating transition-smooth group border-gradient">
-              <CardHeader className="text-center pb-4">
-                <div className={`w-16 h-16 ${service.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-smooth shadow-soft`}>
-                  <service.icon className="h-8 w-8 text-white" />
-                </div>
-                <CardTitle className="text-xl font-bold group-hover:text-primary transition-smooth">
-                  {service.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  {service.description}
-                </p>
-                
-                {/* Service Features */}
-                <div className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center justify-center gap-2 text-sm">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                      <span>{feature}</span>
+            <Link key={index} to={`/service/${service.id}`} className="block">
+              <Card className="gradient-card shadow-card hover:shadow-floating transition-smooth group border-gradient h-full">
+                <CardHeader className="text-center pb-4">
+                  <div className={`w-16 h-16 ${service.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-smooth shadow-soft`}>
+                    <service.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <CardTitle className="text-xl font-bold group-hover:text-primary transition-smooth">
+                    {service.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="text-center flex flex-col justify-between flex-1">
+                  <div>
+                    <p className="text-muted-foreground mb-6 leading-relaxed">
+                      {service.description}
+                    </p>
+                    
+                    {/* Service Features */}
+                    <div className="space-y-2 mb-6">
+                      {service.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center justify-center gap-2 text-sm">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                          <span>{feature}</span>
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
+                  </div>
 
-                <Button 
-                  className="w-full gradient-primary text-white font-medium transition-smooth hover:shadow-soft"
-                  onClick={() => handleWhatsAppClick(service.title)}
-                >
-                  Learn More
-                </Button>
-              </CardContent>
-            </Card>
+                  <Button 
+                    className="w-full gradient-primary text-white font-medium transition-smooth hover:shadow-soft"
+                  >
+                    Learn More
+                  </Button>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
 
