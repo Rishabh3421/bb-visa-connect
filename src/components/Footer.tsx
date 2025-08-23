@@ -67,6 +67,17 @@ const Footer = () => {
                 <Mail className="h-4 w-4 text-accent flex-shrink-0" />
                 <span className="text-sm text-white/80">bbimmigration56@gmail.com</span>
               </div>
+              <div className="flex items-center gap-3">
+                <Instagram className="h-4 w-4 text-pink-500 flex-shrink-0" />
+                <a 
+                  href="https://www.instagram.com/bbimmigration56" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-sm text-white/80 hover:text-accent transition-smooth"
+                >
+                  @bbimmigration56
+                </a>
+              </div>
             </div>
           </div>
 
@@ -137,9 +148,9 @@ const Footer = () => {
                 href="https://www.instagram.com/bbimmigration56"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent hover:text-white transition-smooth"
+                className="w-10 h-10 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center hover:shadow-lg hover:scale-110 transition-smooth"
               >
-                <Instagram className="h-5 w-5" />
+                <Instagram className="h-5 w-5 text-white" />
               </a>
             </div>
 
