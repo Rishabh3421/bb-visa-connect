@@ -51,7 +51,7 @@ const EnquiryForm = ({ className, compact = false }: EnquiryFormProps) => {
 
     // Create WhatsApp message
     const message = `
-🌟 NEW ENQUIRY - BB Immigration 🌟
+🌟 NEW ENQUIRY - Bridge for Borders Immigration 🌟
 
 👤 Name: ${formData.name}
 📧 Email: ${formData.email}

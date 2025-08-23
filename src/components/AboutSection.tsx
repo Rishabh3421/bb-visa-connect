@@ -61,10 +61,10 @@ const AboutSection = () => {
           <div>
             <div className="text-center lg:text-left mb-12">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                About <span className="text-gradient-gold">BB Immigration</span>
+                About <span className="text-gradient-gold">Bridge for Borders Immigration</span>
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                With over 5 years of expertise in immigration consultancy, BB Immigration has helped thousands of individuals and families achieve their dreams of studying, working, and settling abroad.
+                With over 5 years of expertise in immigration consultancy, Bridge for Borders Immigration has helped thousands of individuals and families turn their dreams into reality by studying, working, and settling abroad.
               </p>
             </div>
 
@@ -102,7 +102,7 @@ const AboutSection = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-card">
               <img 
                 src={officeImage} 
-                alt="BB Immigration Office - Professional immigration consultancy"
+                alt="Bridge for Borders Immigration Office - Professional immigration consultancy"
                 className="w-full h-[600px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>

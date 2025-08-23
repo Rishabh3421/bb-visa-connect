@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { useEffect } from "react";
 import { ArrowLeft, Clock, MapPin, GraduationCap, FileText, CheckCircle, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -10,6 +11,11 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 const CountryDetail = () => {
   const { countryId } = useParams();
   const country = countries.find(c => c.id === countryId);
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (!country) {
     return (

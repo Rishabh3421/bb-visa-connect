@@ -9,7 +9,7 @@ const TestimonialsSection = () => {
       country: "Canada",
       visa: "Express Entry PR",
       rating: 5,
-      text: "BB Immigration made my Canadian PR dream come true! Their expert guidance throughout the Express Entry process was invaluable. Highly recommended!",
+      text: "Bridge for Borders Immigration made my Canadian PR dream come true! Their expert guidance throughout the Express Entry process was invaluable. Highly recommended!",
       image: "https://plus.unsplash.com/premium_photo-1682089810582-f7b200217b67?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
@@ -25,7 +25,7 @@ const TestimonialsSection = () => {
       country: "USA",
       visa: "H-1B Work Visa",
       rating: 5,
-      text: "The documentation process was smooth and hassle-free. BB Immigration's expertise in US work visas is unmatched. Thank you for making my American dream possible!",
+      text: "The documentation process was smooth and hassle-free. Bridge for Borders Immigration's expertise in US work visas is unmatched. Thank you for turning my dreams into reality!",
       image: "https://images.unsplash.com/photo-1532375810709-75b1da00537c?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
@@ -33,7 +33,7 @@ const TestimonialsSection = () => {
       country: "UK",
       visa: "Student Visa",
       rating: 4,
-      text: "Applied for UK student visa through BB Immigration. The team helped me with university selection, visa documentation, and interview preparation. Fantastic service!",
+      text: "Applied for UK student visa through Bridge for Borders Immigration. The team helped me with university selection, visa documentation, and interview preparation. Fantastic service!",
       image: "https://plus.unsplash.com/premium_photo-1722889137160-c1ca17ae0084?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
@@ -41,7 +41,7 @@ const TestimonialsSection = () => {
       country: "New Zealand",
       visa: "Skilled Migrant Category",
       rating: 5,
-      text: "Professional and reliable service. The team at BB Immigration guided me through the entire New Zealand immigration process with transparency and efficiency.",
+      text: "Professional and reliable service. The team at Bridge for Borders Immigration guided me through the entire New Zealand immigration process with transparency and efficiency.",
       image: "https://images.unsplash.com/photo-1591980896142-4e36328411ec?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
@@ -70,7 +70,7 @@ const TestimonialsSection = () => {
             Client <span className="text-gradient-gold">Testimonials</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what our satisfied clients have to say about their immigration journey with BB Immigration.
+            Don't just take our word for it. Here's what our satisfied clients have to say about their immigration journey with Bridge for Borders Immigration.
           </p>
         </div>
 
@@ -141,13 +141,13 @@ const TestimonialsSection = () => {
               Ready to Create Your Success Story?
             </h3>
             <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-              Join thousands of satisfied clients who have achieved their immigration dreams with BB Immigration. 
+              Join thousands of satisfied clients who have turned their dreams into reality with Bridge for Borders Immigration. 
               Your success story could be next!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 
                 className="gradient-gold text-white font-semibold px-8 py-4 rounded-lg hover:shadow-gold transition-smooth"
-                onClick={() => window.open("https://wa.me/918396000445?text=Hello! I want to start my immigration journey with BB Immigration.", "_blank")}
+                onClick={() => window.open("https://wa.me/918396000445?text=Hello! I want to start my immigration journey with Bridge for Borders Immigration.", "_blank")}
               >
                 Start Your Journey
               </button>

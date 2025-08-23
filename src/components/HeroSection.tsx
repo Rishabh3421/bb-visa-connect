@@ -47,23 +47,23 @@ const HeroSection = () => {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              Your Trusted Partner for
-              <span className="block text-gradient-gold">
-                Visa & Immigration Services
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight animate-fade-in">
+              Bridge for Borders Immigration
+              <span className="block text-gradient-gold mt-2 animate-slide-up">
+                Turn Your Dreams Into Reality
               </span>
             </h1>
 
             {/* Subheading */}
-            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl">
-              Study, Work, Settle Abroad with Expert Guidance and 100% Legal Compliance
+            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl animate-fade-in" style={{animationDelay: '0.3s'}}>
+              Expert guidance for study, work, and settlement abroad with 100% legal compliance and personalized support.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12 animate-scale-in" style={{animationDelay: '0.6s'}}>
               <Button 
                 size="lg"
-                className="gradient-gold text-white font-semibold px-8 py-4 text-lg transition-smooth hover:shadow-gold"
+                className="gradient-gold text-white font-semibold px-8 py-4 text-lg transition-smooth hover:shadow-gold hover-lift shine-effect"
                 onClick={() => scrollToSection("contact")}
               >
                 Apply Now
@@ -72,7 +72,7 @@ const HeroSection = () => {
               <Button 
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-4 text-lg transition-smooth"
+                className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-4 text-lg transition-smooth hover-scale"
                 onClick={handleWhatsAppClick}
               >
                 Free Consultation
@@ -80,24 +80,24 @@ const HeroSection = () => {
             </div>
 
             {/* Quick Stats */}
-            <div className="grid grid-cols-3 gap-8 max-w-md mx-auto lg:mx-0">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-accent mb-1">95%</div>
+            <div className="grid grid-cols-3 gap-8 max-w-md mx-auto lg:mx-0 animate-fade-in" style={{animationDelay: '0.9s'}}>
+              <div className="text-center hover-scale">
+                <div className="text-3xl font-bold text-accent mb-1 animate-glow">95%</div>
                 <div className="text-sm text-white/80">Success Rate</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-accent mb-1">24x7</div>
+              <div className="text-center hover-scale">
+                <div className="text-3xl font-bold text-accent mb-1 animate-glow">24x7</div>
                 <div className="text-sm text-white/80">Support</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-accent mb-1">1000+</div>
+              <div className="text-center hover-scale">
+                <div className="text-3xl font-bold text-accent mb-1 animate-glow">1000+</div>
                 <div className="text-sm text-white/80">Happy Clients</div>
               </div>
             </div>
           </div>
 
           {/* Right Column - Enquiry Form */}
-          <div className="lg:max-w-lg mx-auto">
+          <div className="lg:max-w-lg mx-auto animate-fade-in" style={{animationDelay: '0.4s'}}>
             <EnquiryForm />
           </div>
         </div>

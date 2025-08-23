@@ -42,14 +42,14 @@ const Footer = () => {
             <div className="mb-6">
               <img 
                 src="/lovable-uploads/cd7ba41c-442d-4599-be51-e3aa912e8fee.png" 
-                alt="BB Immigration" 
+                alt="Bridge for Borders Immigration" 
                 className="h-16 w-auto mb-4"
               />
-              <h3 className="text-xl font-bold mb-3">BB Immigration</h3>
+              <h3 className="text-xl font-bold mb-3">Bridge for Borders Immigration</h3>
               <p className="text-white/80 leading-relaxed">
-                Your trusted partner for visa and immigration services. 
+                Turn your dreams into reality - Your trusted immigration partner. 
                 With 5+ years of expertise and 1000+ successful cases, 
-                we help make your immigration dreams come true.
+                we help bridge borders and create new opportunities abroad.
               </p>
             </div>
             
@@ -123,7 +123,7 @@ const Footer = () => {
             {/* Copyright */}
             <div className="text-center md:text-left">
               <p className="text-white/80 text-sm">
-                © {currentYear} BB Immigration. All rights reserved.
+                © {currentYear} Bridge for Borders Immigration. All rights reserved.
               </p>
               <p className="text-white/60 text-xs mt-1">
                 Professional Immigration Consultancy Services

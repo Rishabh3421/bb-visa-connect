@@ -99,7 +99,7 @@ const ContactSection = () => {
                     allowFullScreen={true}
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="BB Immigration Office Location"
+                    title="Bridge for Borders Immigration Office Location"
                   ></iframe>
                 </div>
               </CardContent>
@@ -173,7 +173,7 @@ const ContactSection = () => {
           <div className="max-w-4xl mx-auto">
             <div className="bg-muted/50 p-6 rounded-lg text-sm text-muted-foreground">
               <p className="mb-2">
-                <strong>Legal Disclaimer:</strong> BB Immigration is an independent immigration consultancy firm. 
+                <strong>Legal Disclaimer:</strong> Bridge for Borders Immigration is an independent immigration consultancy firm. 
                 We are not affiliated with any government agency or embassy. All visa processing times and outcomes 
                 are subject to the respective government authorities' discretion.
               </p>

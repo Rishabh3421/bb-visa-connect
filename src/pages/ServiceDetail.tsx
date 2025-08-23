@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { useEffect } from "react";
 import { ArrowLeft, Clock, CheckCircle, MessageCircle, Users, Award, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -11,6 +12,11 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 const ServiceDetail = () => {
   const { serviceId } = useParams();
   const service = services.find(s => s.id === serviceId);
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (!service) {
     return (

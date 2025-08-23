@@ -56,7 +56,7 @@ const Header = () => {
           <Link to="/" className="flex items-center">
             <img 
               src="/lovable-uploads/cd7ba41c-442d-4599-be51-e3aa912e8fee.png" 
-              alt="BB Immigration" 
+              alt="Bridge for Borders Immigration" 
               className="h-12 w-auto transition-smooth hover:scale-105"
             />
           </Link>
