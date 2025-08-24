@@ -74,11 +74,11 @@ const ServicesSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
           {services.map((service, index) => (
-            <Link key={index} to={`/service/${service.id}`} className="block">
-              <Card className="gradient-card shadow-card hover:shadow-floating transition-smooth group border-gradient h-full">
-                <CardHeader className="text-center pb-4">
+            <Link key={index} to={`/service/${service.id}`} className="block h-full">
+              <Card className="gradient-card shadow-card hover:shadow-floating transition-smooth group border-gradient h-full flex flex-col">
+                <CardHeader className="text-center pb-4 flex-shrink-0">
                   <div className={`w-16 h-16 ${service.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-smooth shadow-soft`}>
                     <service.icon className="h-8 w-8 text-white" />
                   </div>
@@ -86,25 +86,25 @@ const ServicesSection = () => {
                     {service.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="text-center flex flex-col justify-between flex-1">
-                  <div>
-                    <p className="text-muted-foreground mb-6 leading-relaxed">
+                <CardContent className="text-center flex flex-col flex-1 px-4 sm:px-6">
+                  <div className="flex-1 flex flex-col">
+                    <p className="text-muted-foreground mb-4 leading-relaxed text-sm sm:text-base flex-shrink-0">
                       {service.description}
                     </p>
                     
                     {/* Service Features */}
-                    <div className="space-y-2 mb-6">
+                    <div className="space-y-2 mb-6 flex-1">
                       {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center justify-center gap-2 text-sm">
-                          <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                          <span>{feature}</span>
+                        <div key={featureIndex} className="flex items-center justify-center gap-2 text-xs sm:text-sm">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
+                          <span className="text-center">{feature}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
                   <Button 
-                    className="w-full gradient-primary text-white font-medium transition-smooth hover:shadow-soft"
+                    className="w-full gradient-primary text-white font-medium transition-smooth hover:shadow-soft mt-auto text-sm sm:text-base py-2 sm:py-3"
                   >
                     Learn More
                   </Button>

@@ -35,10 +35,10 @@ const ChatBot = () => {
   // ========= Static content =========
   const CONTACT_TEXT =
 `📞 8396000445, 9991740121
-📧 Bridge for Bordersimmigration56@gmail.com
+📧 bridgeforbordersimmigration56@gmail.com
 📍 SF03, 2nd Floor, HAPPY HOMES EMPORIUM SOCIETY, PANIPAT (HARYANA)
-📷 Instagram: @Bridge for Bordersimmigration56
-🔗 https://www.instagram.com/Bridge for Bordersimmigration56`;
+📷 Instagram: @bridgeforbordersimmigration56
+🔗 https://www.instagram.com/bridgeforbordersimmigration56`;
 
   const ABOUT =
 `Bridge for Borders Immigration — 5+ years of experience, 1000+ visa approvals.
@@ -249,16 +249,16 @@ ${CONTACT_TEXT}` },
     return (
       <div className="space-y-1 text-sm leading-relaxed">
         <div>📞 <span className="break-words">8396000445, 9991740121</span></div>
-        <div>📧 <span className="break-words">Bridge for Bordersimmigration56@gmail.com</span></div>
+        <div>📧 <span className="break-words">bridgeforbordersimmigration56@gmail.com</span></div>
         <div>📍 <span className="break-words">SF03, 2nd Floor, HAPPY HOMES EMPORIUM SOCIETY, PANIPAT (HARYANA)</span></div>
-        <div>📷 Instagram: <span className="break-words">@Bridge for Bordersimmigration56</span></div>
+        <div>📷 Instagram: <span className="break-words">@bridgeforbordersimmigration56</span></div>
         <div>🔗 <a
-          href="https://www.instagram.com/Bridge for Bordersimmigration56"
+          href="https://www.instagram.com/bridgeforbordersimmigration56"
           target="_blank"
           rel="noreferrer"
           className="underline break-all"
         >
-          https://www.instagram.com/Bridge for Bordersimmigration56
+          https://www.instagram.com/bridgeforbordersimmigration56
         </a></div>
       </div>
     );
@@ -267,7 +267,7 @@ ${CONTACT_TEXT}` },
   return (
     <>
       {/* Floating button */}
-      <div className="fixed bottom-6 right-6 z-50">
+      <div className="fixed bottom-6 left-6 z-50">
         <Button
           size="lg"
           className="w-16 h-16 rounded-full gradient-primary text-white shadow-floating hover:shadow-gold transition-smooth animate-float"
@@ -283,7 +283,7 @@ ${CONTACT_TEXT}` },
 
       {/* Chat window */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 w-96 max-w-[calc(100vw-2rem)] h-[600px] z-50 animate-scale-in">
+        <div className="fixed bottom-24 left-6 w-96 max-w-[calc(100vw-2rem)] h-[600px] z-50 animate-scale-in">
           <Card className="h-full shadow-floating border-0 overflow-hidden flex flex-col">
             {/* Header */}
             <div className="gradient-primary text-white p-4 flex items-center justify-between">

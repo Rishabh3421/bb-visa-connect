@@ -53,12 +53,16 @@ const Header = () => {
         {/* Main Navigation */}
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center gap-3">
             <img 
               src="/lovable-uploads/cd7ba41c-442d-4599-be51-e3aa912e8fee.png" 
               alt="Bridge for Borders Immigration" 
               className="h-12 w-auto transition-smooth hover:scale-105"
             />
+            <div className="hidden sm:block">
+              <h1 className="text-xl font-bold text-primary">Bridge for Borders</h1>
+              <p className="text-sm text-muted-foreground">Turn your dreams into reality</p>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
