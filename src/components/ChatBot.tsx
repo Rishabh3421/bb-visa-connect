@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect, ReactNode } from "react";
-import { MessageCircle, Send, X, Bot, User, Loader2, Mail } from "lucide-react";
+import { MessageCircle, Send, X, Bot, User, Loader2, Mail, Minus, ChevronUp, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
@@ -24,9 +24,11 @@ type QA = {
 
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMinimized, setIsMinimized] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputMessage, setInputMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [showQuickQuestions, setShowQuickQuestions] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -217,6 +219,11 @@ ${CONTACT_TEXT}` },
     setMessages((prev) => [...prev, userMessage]);
     setInputMessage("");
     setIsLoading(true);
+    
+    // Hide quick questions after first user message
+    if (messages.length >= 1) {
+      setShowQuickQuestions(false);
+    }
 
     setTimeout(() => {
       const { answer, kind } = resolveQA(userMessage.text);
@@ -283,8 +290,8 @@ ${CONTACT_TEXT}` },
 
       {/* Chat window */}
       {isOpen && (
-        <div className="fixed bottom-24 left-6 w-96 max-w-[calc(100vw-2rem)] h-[500px] lg:h-[calc(100vh-180px)] lg:max-h-[500px] z-50 animate-scale-in">
-          <Card className="h-full shadow-floating border-0 overflow-hidden flex flex-col">
+        <div className="fixed bottom-24 left-6 w-96 max-w-[calc(100vw-2rem)] z-50 animate-scale-in">
+          <Card className={`shadow-floating border-0 overflow-hidden flex flex-col ${isMinimized ? 'h-auto' : 'h-[500px] lg:h-[calc(100vh-180px)] lg:max-h-[500px]'}`}>
             {/* Header */}
             <div className="gradient-primary text-white p-4 flex items-center justify-between">
               <div className="flex items-center gap-3">
@@ -293,88 +300,115 @@ ${CONTACT_TEXT}` },
                 </div>
                 <div>
                   <h3 className="font-semibold">Bridge for Borders Immigration Assistant</h3>
-      
                 </div>
               </div>
-              <Button variant="ghost" size="sm" className="text-white hover:bg-white/10" onClick={() => setIsOpen(false)}>
-                <X className="h-4 w-4" />
-              </Button>
-            </div>
-
-            {/* Messages */}
-            <CardContent className="flex-1 overflow-y-auto p-4 space-y-4">
-              {messages.map((m) => (
-                <div key={m.id} className={`flex ${m.isBot ? "justify-start" : "justify-end"}`}>
-                  <div className={`max-w-[85%] p-3 rounded-2xl shadow-sm ${
-                    m.isBot ? "bg-muted text-foreground" : "gradient-primary text-white"
-                  } break-words`}>
-                    <div className="flex items-start gap-2">
-                      {m.isBot ? <Bot className="h-4 w-4 mt-0.5 shrink-0" /> : <User className="h-4 w-4 mt-0.5 shrink-0" />}
-                      <div className="flex-1 min-w-0">
-                        {renderMessageContent(m)}
-                        <p className={`text-xs mt-1 ${m.isBot ? "text-muted-foreground" : "text-white/70"}`}>
-                          {m.timestamp.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-
-              {isLoading && (
-                <div className="flex justify-start">
-                  <div className="bg-muted p-3 rounded-2xl flex items-center gap-2">
-                    <Loader2 className="h-4 w-4 animate-spin" />
-                    <span className="text-sm">Typing…</span>
-                  </div>
-                </div>
-              )}
-
-              <div ref={messagesEndRef} />
-            </CardContent>
-
-            {/* Quick Questions — ALWAYS visible */}
-            <div className="p-4 border-t bg-muted/30">
-              <p className="text-xs text-muted-foreground mb-2">Quick questions:</p>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  "Visa timing",
-                  "Study visa timing",
-                  "Tourist visa timing",
-                  "Business visa timing",
-                  "Documents required",
-                  "Process steps",
-                  "Countries we serve",
-                  "Contact details",
-                ].map((q) => (
-                  <Badge
-                    key={q}
-                    variant="outline"
-                    className="cursor-pointer hover:bg-primary hover:text-white transition-smooth text-xs px-2 py-1"
-                    onClick={() => setInputMessage(q)}
-                  >
-                    {q}
-                  </Badge>
-                ))}
-              </div>
-            </div>
-
-            {/* Input */}
-            <div className="p-4 border-t">
-              <div className="flex gap-2">
-                <Input
-                  placeholder="Ask about visa timing, documents, process, countries…"
-                  value={inputMessage}
-                  onChange={(e) => setInputMessage(e.target.value)}
-                  onKeyPress={handleKeyPress}
-                  disabled={isLoading}
-                  className="flex-1"
-                />
-                <Button size="sm" onClick={sendMessage} disabled={!inputMessage.trim() || isLoading} className="px-3">
-                  <Send className="h-4 w-4" />
+              <div className="flex items-center gap-1">
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  className="text-white hover:bg-white/10" 
+                  onClick={() => setIsMinimized(!isMinimized)}
+                >
+                  <Minus className="h-4 w-4" />
+                </Button>
+                <Button variant="ghost" size="sm" className="text-white hover:bg-white/10" onClick={() => setIsOpen(false)}>
+                  <X className="h-4 w-4" />
                 </Button>
               </div>
             </div>
+
+            {!isMinimized && (
+              <>
+                {/* Messages */}
+                <CardContent className="flex-1 overflow-y-auto p-4 space-y-4">
+                  {messages.map((m) => (
+                    <div key={m.id} className={`flex ${m.isBot ? "justify-start" : "justify-end"}`}>
+                      <div className={`max-w-[85%] p-3 rounded-2xl shadow-sm ${
+                        m.isBot ? "bg-muted text-foreground" : "gradient-primary text-white"
+                      } break-words`}>
+                        <div className="flex items-start gap-2">
+                          {m.isBot ? <Bot className="h-4 w-4 mt-0.5 shrink-0" /> : <User className="h-4 w-4 mt-0.5 shrink-0" />}
+                          <div className="flex-1 min-w-0">
+                            {renderMessageContent(m)}
+                            <p className={`text-xs mt-1 ${m.isBot ? "text-muted-foreground" : "text-white/70"}`}>
+                              {m.timestamp.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+
+                  {isLoading && (
+                    <div className="flex justify-start">
+                      <div className="bg-muted p-3 rounded-2xl flex items-center gap-2">
+                        <Loader2 className="h-4 w-4 animate-spin" />
+                        <span className="text-sm">Typing…</span>
+                      </div>
+                    </div>
+                  )}
+
+                  <div ref={messagesEndRef} />
+                </CardContent>
+
+                {/* Quick Questions — Conditional with toggle */}
+                <div className="border-t bg-muted/30">
+                  <div className="p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <p className="text-xs text-muted-foreground">Quick questions:</p>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className="text-xs px-2 py-1 h-auto"
+                        onClick={() => setShowQuickQuestions(!showQuickQuestions)}
+                      >
+                        {showQuickQuestions ? <ChevronUp className="h-3 w-3" /> : <ChevronDown className="h-3 w-3" />}
+                      </Button>
+                    </div>
+                    {showQuickQuestions && (
+                      <div className="flex flex-wrap gap-2">
+                        {[
+                          "Visa timing",
+                          "Study visa timing",
+                          "Tourist visa timing",
+                          "Business visa timing",
+                          "Documents required",
+                          "Process steps",
+                          "Countries we serve",
+                          "Contact details",
+                        ].map((q) => (
+                          <Badge
+                            key={q}
+                            variant="outline"
+                            className="cursor-pointer hover:bg-primary hover:text-white transition-smooth text-xs px-2 py-1"
+                            onClick={() => setInputMessage(q)}
+                          >
+                            {q}
+                          </Badge>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                {/* Input */}
+                <div className="p-4 border-t">
+                  <div className="flex gap-2">
+                    <Input
+                      placeholder="Ask about visa timing, documents, process, countries…"
+                      value={inputMessage}
+                      onChange={(e) => setInputMessage(e.target.value)}
+                      onKeyPress={handleKeyPress}
+                      disabled={isLoading}
+                      className="flex-1"
+                    />
+                    <Button size="sm" onClick={sendMessage} disabled={!inputMessage.trim() || isLoading} className="px-3">
+                      <Send className="h-4 w-4" />
+                    </Button>
+                  </div>
+                </div>
+              </>
+            )}
           </Card>
         </div>
       )}
