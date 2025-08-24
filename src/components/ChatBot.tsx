@@ -283,7 +283,7 @@ ${CONTACT_TEXT}` },
 
       {/* Chat window */}
       {isOpen && (
-        <div className="fixed bottom-24 left-6 w-96 max-w-[calc(100vw-2rem)] h-[600px] z-50 animate-scale-in">
+        <div className="fixed bottom-24 left-6 w-96 max-w-[calc(100vw-2rem)] h-[500px] lg:h-[calc(100vh-180px)] lg:max-h-[500px] z-50 animate-scale-in">
           <Card className="h-full shadow-floating border-0 overflow-hidden flex flex-col">
             {/* Header */}
             <div className="gradient-primary text-white p-4 flex items-center justify-between">
